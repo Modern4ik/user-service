@@ -1,0 +1,40 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5455/user_db
+    username: postgres
+    password: mysecretpassword
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+  redis:
+    host: localhost
+    port: 6380
+    password:
+    cache-ttl: 10m
+
+  cache:
+    type: redis
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

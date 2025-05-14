@@ -1,0 +1,1 @@
+INSERT INTO users (nickname, first_name, last_name, email, created_at) VALUES ('ONE', 'Serg', 'Zayts', 'one@mail.ru', CURRENT_TIMESTAMP), ('TWO', 'Igor', 'Zayts', 'two@mail.ru', CURRENT_TIMESTAMP), ('THREE', 'Serg', 'Zayts', 'three@mail.ru', CURRENT_TIMESTAMP)
